@@ -13,13 +13,7 @@ A simple and efficient ComfyUI custom node that allows you to batch process mult
 
 ## 🚀 Installation
 
-### Method 1: ComfyUI Manager (Recommended)
-1. Open ComfyUI Manager
-2. Search for "Simple Prompt Batcher"
-3. Click Install
-4. Restart ComfyUI
-
-### Method 2: Manual Installation
+### Manual Installation
 1. Navigate to your ComfyUI custom nodes directory:
    ```bash
    cd ComfyUI/custom_nodes/
