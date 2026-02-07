@@ -158,7 +158,7 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        628132452435800,
+        975873492175846,
         "randomize",
         4,
         1,
@@ -352,49 +352,6 @@
       ]
     },
     {
-      "id": 56,
-      "type": "SimplePromptBatcher",
-      "pos": [
-        405.21551002213346,
-        221.44309846775698
-      ],
-      "size": [
-        364.4321427873508,
-        283.66376369960267
-      ],
-      "flags": {},
-      "order": 3,
-      "mode": 0,
-      "inputs": [],
-      "outputs": [
-        {
-          "name": "prompt",
-          "shape": 6,
-          "type": "STRING",
-          "links": [
-            56,
-            57
-          ]
-        }
-      ],
-      "properties": {
-        "cnr_id": "comfyui-simple-prompt-batcher",
-        "ver": "1.0.0",
-        "Node name for S&R": "SimplePromptBatcher",
-        "ue_properties": {
-          "widget_ue_connectable": {},
-          "input_ue_unconnectable": {},
-          "version": "7.5.2"
-        }
-      },
-      "widgets_values": [
-        "A 42-year-old woman with greasy shoulder-length black hair, wearing a frayed lavender robe tied crookedly, stands barefoot in a dim kitchen, staring into an open refrigerator glowing faintly blue. Inside, dozens of identical eggs float in midair, each containing a tiny screaming face. The only light comes from the fridge’s dying bulb, casting long shadows that twitch like living things on the cracked linoleum.\n\nA 6-year-old boy with matted blond curls and a too-large flannel shirt sits cross-legged on a bathroom floor, pressing his forehead against the mirror as his reflection blinks without him. Water drips from the faucet in slow, heavy drops—each splash echoes like a heartbeat. The tiles are covered in peeling stickers of smiling animals, their eyes scratched out.\n\nA man in his late 50s with a shaved head and a stained white lab coat stands motionless beneath a flickering fluorescent tube in an endless corridor lined with identical doors. In his hand: a single key that doesn’t belong to any lock. The air smells of burnt sugar and wet wool. Every door handle is rusted shut, except one—slightly ajar, whispering.\n\n\n\n\n\n\n",
-        "surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed"
-      ],
-      "color": "#232",
-      "bgcolor": "#353"
-    },
-    {
       "id": 57,
       "type": "CLIPTextEncode",
       "pos": [
@@ -491,55 +448,6 @@
       "widgets_values": []
     },
     {
-      "id": 58,
-      "type": "ShowText|pysssss",
-      "pos": [
-        423.00661112698293,
-        746.4698956378583
-      ],
-      "size": [
-        367.4023466274207,
-        518.2557719909985
-      ],
-      "flags": {
-        "collapsed": true
-      },
-      "order": 8,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "text",
-          "type": "STRING",
-          "link": 57
-        }
-      ],
-      "outputs": [
-        {
-          "name": "STRING",
-          "shape": 6,
-          "type": "STRING",
-          "links": null
-        }
-      ],
-      "title": "Show Text - Debugging 🐍",
-      "properties": {
-        "cnr_id": "comfyui-custom-scripts",
-        "ver": "1.2.5",
-        "Node name for S&R": "ShowText|pysssss",
-        "ue_properties": {
-          "version": "7.0.1",
-          "widget_ue_connectable": {}
-        }
-      },
-      "widgets_values": [
-        "A 42-year-old woman with greasy shoulder-length black hair, wearing a frayed lavender robe tied crookedly, stands barefoot in a dim kitchen, staring into an open refrigerator glowing faintly blue. Inside, dozens of identical eggs float in midair, each containing a tiny screaming face. The only light comes from the fridge’s dying bulb, casting long shadows that twitch like living things on the cracked linoleum., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed",
-        "A 6-year-old boy with matted blond curls and a too-large flannel shirt sits cross-legged on a bathroom floor, pressing his forehead against the mirror as his reflection blinks without him. Water drips from the faucet in slow, heavy drops—each splash echoes like a heartbeat. The tiles are covered in peeling stickers of smiling animals, their eyes scratched out., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed",
-        "A man in his late 50s with a shaved head and a stained white lab coat stands motionless beneath a flickering fluorescent tube in an endless corridor lined with identical doors. In his hand: a single key that doesn’t belong to any lock. The air smells of burnt sugar and wet wool. Every door handle is rusted shut, except one—slightly ajar, whispering., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed"
-      ],
-      "color": "#432",
-      "bgcolor": "#653"
-    },
-    {
       "id": 35,
       "type": "MarkdownNote",
       "pos": [
@@ -553,7 +461,7 @@
       "flags": {
         "collapsed": false
       },
-      "order": 4,
+      "order": 3,
       "mode": 0,
       "inputs": [],
       "outputs": [],
@@ -577,7 +485,7 @@
         110
       ],
       "flags": {},
-      "order": 5,
+      "order": 4,
       "mode": 0,
       "inputs": [],
       "outputs": [
@@ -607,6 +515,99 @@
         576,
         1
       ]
+    },
+    {
+      "id": 56,
+      "type": "SimplePromptBatcher",
+      "pos": [
+        405.21551002213346,
+        221.44309846775698
+      ],
+      "size": [
+        364.4321427873508,
+        283.66376369960267
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "prompt",
+          "shape": 6,
+          "type": "STRING",
+          "links": [
+            56,
+            57
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-simple-prompt-batcher",
+        "ver": "1.0.0",
+        "Node name for S&R": "SimplePromptBatcher",
+        "ue_properties": {
+          "widget_ue_connectable": {},
+          "input_ue_unconnectable": {},
+          "version": "7.5.2"
+        }
+      },
+      "widgets_values": [
+        "a room with neon light, a teddybear",
+        "A 42-year-old woman with greasy shoulder-length black hair, wearing a frayed lavender robe tied crookedly, stands barefoot in a dim kitchen, staring into an open refrigerator glowing faintly blue. Inside, dozens of identical eggs float in midair, each containing a tiny screaming face. The only light comes from the fridge’s dying bulb, casting long shadows that twitch like living things on the cracked linoleum.\n\nA 6-year-old boy with matted blond curls and a too-large flannel shirt sits cross-legged on a bathroom floor, pressing his forehead against the mirror as his reflection blinks without him. Water drips from the faucet in slow, heavy drops—each splash echoes like a heartbeat. The tiles are covered in peeling stickers of smiling animals, their eyes scratched out.\n\nA man in his late 50s with a shaved head and a stained white lab coat stands motionless beneath a flickering fluorescent tube in an endless corridor lined with identical doors. In his hand: a single key that doesn’t belong to any lock. The air smells of burnt sugar and wet wool. Every door handle is rusted shut, except one—slightly ajar, whispering.\n",
+        "surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 58,
+      "type": "ShowText|pysssss",
+      "pos": [
+        423.00661112698293,
+        746.4698956378583
+      ],
+      "size": [
+        345.5792930551006,
+        518.2557719909985
+      ],
+      "flags": {
+        "collapsed": true
+      },
+      "order": 8,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 57
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "title": "Show Text - Debugging 🐍",
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.2.5",
+        "Node name for S&R": "ShowText|pysssss",
+        "ue_properties": {
+          "version": "7.0.1",
+          "widget_ue_connectable": {}
+        }
+      },
+      "widgets_values": [
+        "a room with neon light, a teddybear, A 42-year-old woman with greasy shoulder-length black hair, wearing a frayed lavender robe tied crookedly, stands barefoot in a dim kitchen, staring into an open refrigerator glowing faintly blue. Inside, dozens of identical eggs float in midair, each containing a tiny screaming face. The only light comes from the fridge’s dying bulb, casting long shadows that twitch like living things on the cracked linoleum., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed",
+        "a room with neon light, a teddybear, A 6-year-old boy with matted blond curls and a too-large flannel shirt sits cross-legged on a bathroom floor, pressing his forehead against the mirror as his reflection blinks without him. Water drips from the faucet in slow, heavy drops—each splash echoes like a heartbeat. The tiles are covered in peeling stickers of smiling animals, their eyes scratched out., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed",
+        "a room with neon light, a teddybear, A man in his late 50s with a shaved head and a stained white lab coat stands motionless beneath a flickering fluorescent tube in an endless corridor lined with identical doors. In his hand: a single key that doesn’t belong to any lock. The air smells of burnt sugar and wet wool. Every door handle is rusted shut, except one—slightly ajar, whispering., surrealistic, worn look, strong colors, dramatic lighting, unreal engine, rendering, cinematic composition, highly detailed"
+      ],
+      "color": "#432",
+      "bgcolor": "#653"
     }
   ],
   "links": [
@@ -753,8 +754,8 @@
     "ds": {
       "scale": 0.9531171560791476,
       "offset": [
-        140.5027772954123,
-        -35.67271407407783
+        414.01505676533793,
+        -81.72652487282919
       ]
     },
     "frontendVersion": "1.37.11",

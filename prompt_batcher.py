@@ -1,6 +1,6 @@
 """
 ComfyUI Simple Prompt Batcher with Global Style (Robust Version)
-Takes multiple prompts (one per line) and appends a global style to all prompts for batch processing
+Takes multiple prompts (one per line) and prepends and appends a global string to all prompts for batch processing
 Includes extra safeguards to prevent duplicate prompts or ComfyUI misinterpretation
 """
 
@@ -15,17 +15,23 @@ class SimplePromptBatcher:
     def INPUT_TYPES(cls):
         return {
             "required": {
+                "prepend": ("STRING", {
+                    "default": "",
+                    "multiline": True,
+                    "placeholder": "Text to prepend to all prompts",
+                    "tooltip": "Text prepended to every prompt."
+                }),
                 "prompts": ("STRING", {
                     "default": "",
                     "multiline": True,
                     "placeholder": "Prompts (one per line). Enter one prompt per line. No empty lines between prompts.",
                     "tooltip": "Each line is treated as a separate prompt for batch processing."
                 }),
-                "style": ("STRING", {
+                "append": ("STRING", {
                     "default": "",
                     "multiline": True,
-                    "placeholder": "Global Style. Optional: style string appended to all prompts.",
-                    "tooltip": "Define a style prompt that gets appended to every prompt in the list."
+                    "placeholder": "Text to append to all prompts",
+                    "tooltip": "Text appended to every prompt."
                 }),
             }
         }
@@ -36,10 +42,10 @@ class SimplePromptBatcher:
     CATEGORY = "utils/text"
     OUTPUT_IS_LIST = (True,)  # This makes it output as a batch
 
-    def batch_prompts(self, prompts, style=""):
+    def batch_prompts(self, prepend="", prompts="", append=""):
         """
         Split prompts by newline and return as batch
-        Each line becomes a separate inference
+        Format: [prepend] + prompt + [append]
         """
 
         # Split by newline and remove empty lines / trim spaces
@@ -49,12 +55,10 @@ class SimplePromptBatcher:
             print("[Prompt Batcher] ⚠️ No prompts provided, returning empty prompt")
             return ([""],)
 
-        # Append style safely if provided, avoiding duplicates
-        if style:
-            prompt_list = [
-                f"{p}, {style}" if style not in p else p
-                for p in prompt_list
-            ]
+        prompt_list = [
+            f"{prepend}{', ' if prepend else ''}{p}{', ' if append else ''}{append}"
+            for p in prompt_list
+        ]
 
         # Debug: print each prompt for verification
         print(f"[Prompt Batcher] 📋 Batching {len(prompt_list)} prompts:")
